@@ -12,7 +12,7 @@
         name: insights-client
         state: latest
 
-- name: redhat-access-insights registration
+- name: Insights Client Registration
   hosts: all
   tasks:
     - name: insights-client registration

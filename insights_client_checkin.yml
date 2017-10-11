@@ -1,0 +1,5 @@
+- name: Insights Client Check-in
+  hosts: all
+  tasks:
+    - name: insights-client check-in
+      command: /usr/bin/insights-client 
