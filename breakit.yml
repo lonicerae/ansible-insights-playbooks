@@ -1,0 +1,12 @@
+---
+- name: Break the breakit system
+  hosts: breakit.example.com
+  become: true
+
+  tasks:
+    - name: Modify the /etc/fstab
+      lineinfile:
+        dest: /etc/fstab
+        regexp: '^(.*data=)ordered(.*)$'
+        line: '\1writeback\2'
+        backrefs: yes
